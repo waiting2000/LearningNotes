@@ -1,0 +1,10 @@
+# 忽略整个目录
+01.附件
+02.inbox
+04.与时间同行
+05.项目
+.obsidian
+.DS_Store
+ 
+# 忽略所有文件，但跟踪 .gitignore 和 foo.bar 文件
+!.gitignore
