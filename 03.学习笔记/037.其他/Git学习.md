@@ -4,31 +4,63 @@ tags:
   - 个人
 ---
 # Git配置
-
-<<<<<<< HEAD:03.学习笔记/其他/Git学习.md
 # Git基本操作
-
-=======
 # Git工作原理
 >https://www.runoob.com/git/git-workspace-index-repo.html
 ![image.png](https://saveattachment.oss-cn-shanghai.aliyuncs.com/saveImages/202406071055327.png)
-- 图中左侧为工作区，右侧为版本库。在版本库中标记为 "index" 的区域是暂存区（stage/index），标记为 "master" 的是 master 分支所代表的目录树。
-    
-- 图中我们可以看出此时 "HEAD" 实际是指向 master 分支的一个"游标"。所以图示的命令中出现 HEAD 的地方可以用 master 来替换。
-    
-- 图中的 objects 标识的区域为 Git 的对象库，实际位于 ".git/objects" 目录下，里面包含了创建的各种对象及内容。
-    
-- 当对工作区修改（或新增）的文件执行 git add 命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
-    
-- 当执行提交操作（git commit）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。
-    
-- 当执行 git reset HEAD 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。
-    
-- 当执行 git rm --cached <file> 命令时，会直接从暂存区删除文件，工作区则不做出改变。
-    
-- 当执行 git checkout . 或者 git checkout -- <file> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。
-    
-- 当执行 git checkout HEAD . 或者 git checkout HEAD <file> 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。
->>>>>>> newbranch:03.学习笔记/037.其他/Git学习.md
+# Git操作
+## git clone
+>从git服务器拉取代码
+
+```shell
+git clone https://github.com/waiting2000/LearningNotes.git
+```
+
+## git config
+>查看git配置
+
+```shell
+git config --global user.name 
+git config --global user.email
+```
+## git branch
+>创建、重命名、查看、删除项目分支，通过 `Git` 做项目开发时，一般都是在开发分支中进行，开发完成后合并分支到主干。
+
+```shell
+git branch main
+```
+## git checkout
+>切换分支
+
+```shell
+git checkout master
+```
+## git status
+>查看文件变动状态
+
+```shell
+
+```
+## git add
+>添加文件变动到暂存区
+## git commit
+>提交文件变动到版本库
+
+```shell
+git commit -m '提交备注'
+```
+## git push
+>将本地的代码改动推送到服务器
+
+```shell
+git push <远程主机名> <本地分支名>:<远程分支名>
+```
+## git pull
+>将服务器上的最新代码拉取到本地
+## git log
+>查看版本提交记录
+## git tag
+>为项目标记里程碑
+
 
 
