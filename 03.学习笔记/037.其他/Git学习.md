@@ -57,6 +57,10 @@ git push <远程主机名> <本地分支名>:<远程分支名>
 ```
 ## git pull
 >将服务器上的最新代码拉取到本地
+
+```shell
+git pull origin main
+```
 ## git log
 >查看版本提交记录
 ## git tag
